@@ -64,18 +64,18 @@ const Services = () => {
   const parallaxOffset = useParallax({ speed: 0.1 });
 
   return (
-    <section id="services" className="py-24 bg-secondary/30 relative overflow-hidden">
+    <section id="services" className="py-12 md:py-24 bg-secondary/30 relative overflow-hidden">
       {/* Parallax background decoration */}
-      <div 
+      <div
         className="absolute top-0 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl pointer-events-none"
         style={{ transform: `translateY(${parallaxOffset}px)` }}
       />
-      <div 
+      <div
         className="absolute bottom-0 left-0 w-80 h-80 bg-accent/3 rounded-full blur-3xl pointer-events-none"
         style={{ transform: `translateY(${-parallaxOffset * 0.5}px)` }}
       />
       <div className="container mx-auto px-4">
-        <div 
+        <div
           ref={headerRef}
           className={`text-center mb-16 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
@@ -90,11 +90,11 @@ const Services = () => {
             Работаем с корпоративными клиентами и госзаказчиками.
           </p>
         </div>
-        
+
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className={`group bg-card shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden ${service.popular ? 'ring-2 ring-primary shadow-primary/10' : ''} ${cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: cardsVisible ? `${index * 100}ms` : '0ms' }}
             >
@@ -117,8 +117,8 @@ const Services = () => {
               <CardContent>
                 <ul className="space-y-2.5 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li 
-                      key={idx} 
+                    <li
+                      key={idx}
                       className="flex items-center gap-3 text-sm text-muted-foreground transition-all duration-300 hover:text-foreground hover:translate-x-1"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 transition-transform duration-300 group-hover:scale-150" />
@@ -127,11 +127,11 @@ const Services = () => {
                   ))}
                 </ul>
                 <div className="flex items-center justify-end pt-5 border-t border-border/50">
-                  <Link 
+                  <Link
                     to={`/services#${service.id}`}
                     className="flex items-center gap-1.5 text-primary font-medium hover:gap-2.5 transition-all text-sm group/btn"
                   >
-                    Подробнее 
+                    Подробнее
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover/btn:translate-x-1" />
                   </Link>
                 </div>
@@ -141,15 +141,15 @@ const Services = () => {
         </div>
 
         {/* Trust section */}
-        <div 
+        <div
           ref={trustRef}
           className={`mt-20 text-center transition-all duration-700 ${trustVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <p className="text-sm text-muted-foreground mb-8 font-medium">Нам доверяют крупнейшие компании России</p>
           <div className="flex flex-wrap justify-center gap-6">
             {companies.map((company, idx) => (
-              <div 
-                key={company} 
+              <div
+                key={company}
                 className={`px-8 py-4 rounded-xl bg-card shadow-md text-muted-foreground font-semibold text-lg transition-all duration-500 hover:shadow-lg hover:-translate-y-1 hover:text-foreground cursor-default ${trustVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
                 style={{ transitionDelay: trustVisible ? `${idx * 80}ms` : '0ms' }}
               >

@@ -28,10 +28,10 @@ const Header = () => {
       <div className="container mx-auto px-3 sm:px-4 max-w-full">
         <div className="flex items-center justify-between h-16 sm:h-20 gap-2 min-w-0">
           <a href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-1">
-            <img 
-              src={logo} 
-              alt="ДОБРОсофт Logo" 
-              className="w-9 h-9 sm:w-11 sm:h-11 object-contain flex-shrink-0" 
+            <img
+              src={logo}
+              alt="ДОБРОсофт Logo"
+              className="w-9 h-9 sm:w-11 sm:h-11 object-contain flex-shrink-0"
             />
             <div className="flex flex-col min-w-0 overflow-hidden">
               <BrandName size="md" className="text-base sm:text-lg truncate" />
@@ -53,8 +53,8 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-shrink-0">
-            <a 
-              href="tel:+79258454832" 
+            <a
+              href="tel:+79258454832"
               className="text-sm text-foreground font-semibold hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
             >
               +7 (925) 845-48-32
@@ -75,31 +75,34 @@ const Header = () => {
         </div>
 
         {/* Mobile menu with animation */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="py-4 sm:py-6 border-t border-border/50">
-            <nav className="flex flex-col gap-3 sm:gap-4">
+        <div
+          className={`lg:hidden fixed inset-x-0 top-[64px] bottom-0 bg-background/95 backdrop-blur-xl transition-all duration-500 ease-in-out z-40 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}
+        >
+          <div className="flex flex-col h-full overflow-y-auto px-6 py-8">
+            <nav className="flex flex-col gap-6 items-center flex-1 justify-center min-h-[400px]">
               {navLinks.map((link, idx) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-muted-foreground hover:text-foreground transition-all duration-300 py-2 font-medium text-base sm:text-lg hover:translate-x-2 ${isOpen ? 'animate-fade-in' : ''}`}
+                  className={`text-2xl font-bold text-foreground hover:text-primary transition-all duration-300 ${isOpen ? 'animate-fade-in-up' : ''}`}
                   style={{ animationDelay: `${idx * 100}ms` }}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <a 
-                href="tel:+79258454832" 
-                className={`text-foreground py-2 font-semibold text-base sm:text-lg ${isOpen ? 'animate-fade-in' : ''}`}
+              <a
+                href="tel:+79258454832"
+                className={`text-xl font-bold text-primary mt-8 ${isOpen ? 'animate-fade-in-up' : ''}`}
                 style={{ animationDelay: '400ms' }}
               >
                 +7 (925) 845-48-32
               </a>
-              <a href="/contacts">
-                <Button 
-                  variant="hero" 
-                  className={`mt-2 w-full sm:w-auto ${isOpen ? 'animate-fade-in' : ''}`}
+              <a href="/contacts" onClick={() => setIsOpen(false)} className="w-full max-w-xs">
+                <Button
+                  variant="hero"
+                  size="xl"
+                  className={`mt-8 w-full ${isOpen ? 'animate-fade-in-up' : ''}`}
                   style={{ animationDelay: '500ms' }}
                 >
                   Обсудить проект

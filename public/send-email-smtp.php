@@ -54,17 +54,17 @@ $mail = new PHPMailer(true);
 try {
     // SMTP Configuration
     $mail->isSMTP();
-    $mail->Host       = 'smtp.yourdomain.com';  // CHANGE THIS to your SMTP server
+    $mail->Host       = 'smtp.yourdomain.com';  
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'info@yourdomain.com';  // CHANGE THIS to your SMTP username
-    $mail->Password   = 'your-smtp-password';   // CHANGE THIS to your SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or PHPMailer::ENCRYPTION_SMTPS for SSL
-    $mail->Port       = 587;                    // CHANGE THIS if needed (587 for TLS, 465 for SSL)
+    $mail->Username   = 'info@yourdomain.com';  
+    $mail->Password   = 'your-smtp-password';  
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+    $mail->Port       = 587;                    
     $mail->CharSet    = 'UTF-8';
 
     // Recipients
     $mail->setFrom('info@yourdomain.com', 'ДОБРОсофт Website');
-    $mail->addAddress('info@yourdomain.com', 'ДОБРОсофт');  // CHANGE THIS to your email
+    $mail->addAddress('info@yourdomain.com', 'ДОБРОсофт'); 
     $mail->addReplyTo($email, $name);
 
     // Content
