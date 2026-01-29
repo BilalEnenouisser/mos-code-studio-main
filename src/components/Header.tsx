@@ -35,7 +35,6 @@ const Header = () => {
             />
             <div className="flex flex-col min-w-0 overflow-hidden">
               <BrandName size="md" className="text-base sm:text-lg truncate" />
-              <span className="text-[10px] sm:text-xs text-muted-foreground -mt-0.5 block">с 2010 года</span>
             </div>
           </a>
 
