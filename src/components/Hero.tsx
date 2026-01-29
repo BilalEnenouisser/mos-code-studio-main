@@ -116,29 +116,29 @@ const Hero = () => {
             </div>
 
             {/* Stats cards - visible only on larger screens to prevent cutoff */}
-            <div className="hidden sm:block absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 p-4 md:p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300 max-w-[180px] md:max-w-none">
+            <div className="absolute -bottom-4 left-0 md:-bottom-8 md:-left-8 p-3 md:p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300 max-w-[150px] md:max-w-none z-10">
               <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                   <span className="text-xl md:text-3xl">🏆</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-lg md:text-2xl">15+ лет</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">на рынке</p>
+                  <p className="font-bold text-foreground text-base md:text-2xl leading-tight">15+ лет</p>
+                  <p className="text-[10px] md:text-sm text-muted-foreground">на рынке</p>
                 </div>
               </div>
             </div>
 
             <div
-              className="hidden sm:block absolute -top-4 -right-4 md:-top-6 md:-right-6 p-4 md:p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300 max-w-[180px] md:max-w-none"
+              className="absolute -top-4 right-0 md:-top-6 md:-right-6 p-3 md:p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300 max-w-[150px] md:max-w-none z-10"
               style={{ animationDelay: '1s' }}
             >
               <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
                   <span className="text-xl md:text-3xl">📊</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-lg md:text-2xl">200+</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">проектов</p>
+                  <p className="font-bold text-foreground text-base md:text-2xl leading-tight">200+</p>
+                  <p className="text-[10px] md:text-sm text-muted-foreground">проектов</p>
                 </div>
               </div>
             </div>

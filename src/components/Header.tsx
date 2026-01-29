@@ -75,16 +75,14 @@ const Header = () => {
         </div>
 
         {/* Mobile menu with animation */}
-        <div
-          className={`lg:hidden fixed inset-x-0 top-[64px] bottom-0 bg-background/95 backdrop-blur-xl transition-all duration-500 ease-in-out z-40 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}
-        >
-          <div className="flex flex-col h-full overflow-y-auto px-6 py-8">
-            <nav className="flex flex-col gap-6 items-center flex-1 justify-center min-h-[400px]">
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="py-4 sm:py-6 border-t border-border/50">
+            <nav className="flex flex-col gap-3 sm:gap-4">
               {navLinks.map((link, idx) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-2xl font-bold text-foreground hover:text-primary transition-all duration-300 ${isOpen ? 'animate-fade-in-up' : ''}`}
+                  className={`text-muted-foreground hover:text-foreground transition-all duration-300 py-2 font-medium text-base sm:text-lg hover:translate-x-2 ${isOpen ? 'animate-fade-in' : ''}`}
                   style={{ animationDelay: `${idx * 100}ms` }}
                   onClick={() => setIsOpen(false)}
                 >
@@ -93,16 +91,15 @@ const Header = () => {
               ))}
               <a
                 href="tel:+79258454832"
-                className={`text-xl font-bold text-primary mt-8 ${isOpen ? 'animate-fade-in-up' : ''}`}
+                className={`text-foreground py-2 font-semibold text-base sm:text-lg ${isOpen ? 'animate-fade-in' : ''}`}
                 style={{ animationDelay: '400ms' }}
               >
                 +7 (925) 845-48-32
               </a>
-              <a href="/contacts" onClick={() => setIsOpen(false)} className="w-full max-w-xs">
+              <a href="/contacts">
                 <Button
                   variant="hero"
-                  size="xl"
-                  className={`mt-8 w-full ${isOpen ? 'animate-fade-in-up' : ''}`}
+                  className={`mt-2 w-full sm:w-auto ${isOpen ? 'animate-fade-in' : ''}`}
                   style={{ animationDelay: '500ms' }}
                 >
                   Обсудить проект
