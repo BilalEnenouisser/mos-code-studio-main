@@ -73,7 +73,7 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="hidden sm:flex items-center gap-6 pt-8 border-t border-border/50 opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-border/50 opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div
