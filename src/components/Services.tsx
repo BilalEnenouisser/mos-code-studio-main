@@ -64,7 +64,7 @@ const Services = () => {
   const parallaxOffset = useParallax({ speed: 0.1 });
 
   return (
-    <section id="services" className="py-12 md:py-24 bg-secondary/30 relative overflow-hidden">
+    <section id="services" className="py-24 md:py-24 bg-secondary/30 relative overflow-hidden">
       {/* Parallax background decoration */}
       <div
         className="absolute top-0 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl pointer-events-none"

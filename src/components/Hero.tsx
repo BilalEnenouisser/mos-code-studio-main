@@ -20,12 +20,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-primary/5 text-primary text-xs sm:text-sm font-semibold mb-6 sm:mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/5 text-primary text-sm font-semibold mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <span>🏆</span>
               <span>15+ лет успешной работы</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-foreground tracking-tight opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-foreground tracking-tight opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <span className="text-accent">Создаём{" "}
                 <span className="text-primary">цифровые{" "}
                   <span className="relative inline-block">
@@ -36,15 +36,15 @@ const Hero = () => {
                   </span>
                 </span>
                 <br />
-                для бизнеса и госсектора</span>
+                для крупного бизнеса и госсектора</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               Разрабатываем современные веб-сайты, мобильные приложения и кастомное
               программное обеспечение. Более <strong className="text-foreground font-semibold">200 успешных проектов</strong> для корпоративных клиентов и госсектора.
             </p>
 
-            <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8 sm:mb-10 text-sm opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-wrap gap-4 mb-10 text-sm opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               {[
                 { icon: <CheckCircle size={18} className="text-primary" />, text: "Госзаказчики" },
                 { icon: <CheckCircle size={18} className="text-primary" />, text: "Enterprise-решения" },
@@ -57,9 +57,9 @@ const Hero = () => {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10 sm:mb-12 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
               <a href="/contacts" className="w-full sm:w-auto">
-                <Button variant="hero" size="xl" className="w-full sm:w-auto group relative overflow-hidden h-12 sm:h-14">
+                <Button variant="hero" size="xl" className="w-full sm:w-auto group relative overflow-hidden">
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Обсудить проект
                     <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -67,13 +67,13 @@ const Hero = () => {
                 </Button>
               </a>
               <a href="/portfolio" className="w-full sm:w-auto">
-                <Button variant="outline" size="xl" className="w-full sm:w-auto bg-transparent hover:bg-secondary group h-12 sm:h-14">
+                <Button variant="outline" size="xl" className="w-full sm:w-auto bg-transparent hover:bg-secondary group">
                   <span className="transition-transform duration-300 group-hover:scale-105">Смотреть портфолио</span>
                 </Button>
               </a>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-border/50 opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="flex items-center gap-6 pt-8 border-t border-border/50 opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div
@@ -103,10 +103,10 @@ const Hero = () => {
           </div>
 
           <div
-            className="relative opacity-0 animate-fade-in-right mt-8 lg:mt-0"
+            className="relative opacity-0 animate-fade-in-right"
             style={{ animationDelay: '0.4s' }}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl group mx-auto max-w-md lg:max-w-none">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <img
                 src={heroImage}
                 alt="Команда ДОБРОсофт за работой"
@@ -115,30 +115,30 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/10 to-transparent" />
             </div>
 
-            {/* Stats cards - visible only on larger screens to prevent cutoff */}
-            <div className="absolute -bottom-4 left-0 md:-bottom-8 md:-left-8 p-3 md:p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300 max-w-[150px] md:max-w-none z-10">
-              <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <span className="text-xl md:text-3xl">🏆</span>
+            {/* Stats cards - with float animation */}
+            <div className="absolute -bottom-8 -left-8 p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <span className="text-3xl">🏆</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-base md:text-2xl leading-tight">15+ лет</p>
-                  <p className="text-[10px] md:text-sm text-muted-foreground">на рынке</p>
+                  <p className="font-bold text-foreground text-2xl">15+ лет</p>
+                  <p className="text-sm text-muted-foreground">на рынке</p>
                 </div>
               </div>
             </div>
 
             <div
-              className="absolute -top-4 right-0 md:-top-6 md:-right-6 p-3 md:p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300 max-w-[150px] md:max-w-none z-10"
+              className="absolute -top-6 -right-6 p-5 rounded-2xl bg-card shadow-xl animate-float hover:shadow-2xl transition-all duration-300"
               style={{ animationDelay: '1s' }}
             >
-              <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                  <span className="text-xl md:text-3xl">📊</span>
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <span className="text-3xl">📊</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-base md:text-2xl leading-tight">200+</p>
-                  <p className="text-[10px] md:text-sm text-muted-foreground">проектов</p>
+                  <p className="font-bold text-foreground text-2xl">200+</p>
+                  <p className="text-sm text-muted-foreground">проектов</p>
                 </div>
               </div>
             </div>
