@@ -104,6 +104,13 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+
+  /* Zoom 125% for 1920x1080 screens and larger, keeping standard laptop (1366x768) at 100% */
+  @media (min-width: 1536px) {
+    html {
+      zoom: 1.25;
+    }
+  }
 }
 
 @layer utilities {
@@ -129,9 +136,12 @@ All colors MUST be HSL.
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
