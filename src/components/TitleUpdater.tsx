@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+
 const TITLES: Record<string, string> = {
-    "/": "ДОБРОсофт - веб студия полного цикла",
+    "/": "ДОБРОсофт™ - Веб Студия Полного Цикла",
     "/about": "О нас - ДОБРОсофт",
     "/contacts": "Контакты - ДОБРОсофт",
     "/portfolio": "Портфолио - ДОБРОсофт",
